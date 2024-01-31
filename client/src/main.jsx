@@ -17,7 +17,7 @@ const browserRouter = createBrowserRouter([
       element: <Home />
     },
     {
-      path: '/qrcode/:qrCodeid',
+      path: '/qrcode/:qrCodeId',
       element: <QRCode />
     },
     {
