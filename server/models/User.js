@@ -14,3 +14,16 @@ const userSchema = new Schema({
 const User = model('User', userSchema)
 
 module.exports = User
+
+// how does this get created
+// make sure front end stays uptodate
+// const QR = {
+//     timestamp,
+//     users_that_scanned: [
+//         // records with own schema
+//         {
+//             user_id,
+//             timestamp_when_scanned
+//         }
+//     ]
+// }
