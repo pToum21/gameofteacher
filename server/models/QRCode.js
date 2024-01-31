@@ -1,7 +1,7 @@
 const { model, Schema, Types } = require('mongoose')
 
 const scanEventSchema = new Schema({
-    userId: {
+    user: {
         type: Types.ObjectId,
         ref: 'User'
     },
@@ -16,6 +16,6 @@ const qrCodeSchema = new Schema({
     timestamps: true
 })
 
-const User = model('QRCode', qrCodeSchema)
+const QRCode = model('QRCode', qrCodeSchema)
 
 module.exports = QRCode

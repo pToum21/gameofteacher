@@ -8,11 +8,30 @@ name: String
 username: String
 }
 
+type ScanEvent {
+    user: User
+    createdAt: String
+
+}
+
+type QRCode {
+    _id: ID
+    scanEvents: [ScanEvent]
+    createdAt: String
+}
+
+type Auth {
+    user: User
+    token: ID
+}
+
 type Mutation {
-    createUser(name: String!, username: String!, password: String! ): User
+    createUser(name: String!, username: String!, password: String! ): Auth
+    createQRCode: QRCode 
+    scanQRCode(id: ID): QRCode
 }
 
 type Query {
-    hello: String
+    getQRCode(id: ID): QRCode
 }
 `;
