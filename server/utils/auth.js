@@ -7,7 +7,13 @@ const tokenSecret = process.env.SECERT || 'asddfsfd09f8w9'
 
 module.exports = {
     authMiddleWare: ({ req }) => {
-        const token = req.headers.authorization.split(" ").pop().trim();
+        console.log(req.headers)
+        let token = req.headers.authorization;
+
+        if (token) {
+            token = token.split(' ').pop().trim();
+        }
+        
         // Bearer
 
         if (!token) {
