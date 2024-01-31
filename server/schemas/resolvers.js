@@ -1,5 +1,5 @@
 const { User, QRCode } = require('../models')
-const {signToken} = require('../../utils/auth')
+const {signToken} = require('../utils/auth')
 module.exports = {
     Mutation: {
         createUser: async (parent, args) => {
